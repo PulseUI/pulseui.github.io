@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend Deca';
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  overflow-x: hidden;
+  --color: var(--dark);
+}
+
+:root {
+  --lightest: #fff;
+  --lighter: #f2f2f2;
+  --light: #eee;
+  --dark: #36393f;
+  --darker: #2f3136;
+  --darkest: #202225;
+  --bluex: #2c6fef20;
+  --blue: #2c6fef;
+  --red: #e1503c;
+  --yellow: #eea71f;
+}
+
+main {
+  color: var(--color);
+}
+
+.btn .waves-ripple {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  opacity: 0;
+  background: rgba(0,0,0,0.2);
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  transition-property: transform, opacity, -webkit-transform;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  transition: .3s ease-out;
+}
