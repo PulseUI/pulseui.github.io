@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Client</title>
+  <title>Pulse</title>
+  <link href="../pulse.css" rel="stylesheet" type="text/css" />
   <link href="../style.css" rel="stylesheet" type="text/css" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +13,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <script src="https://cdn.jsdelivr.net/npm/ripplet.js@1.1.0"></script>
 </head>
 
-<body>
+<body x-data="{ icon: 'material-symbols-rounded' }">
+  <nav id="navigation">
+    <div class="left">
+      <a href="#" class="btn pulse-2c6fef">
+        Pulse
+      </a>
+      <div class="text">
+        <input type="text" required>
+        <label>Search</label>
+      </div>
+    </div>
+    <div class="right">
+      <a href="../guidlines">Design</a>
+      <a href="../components">Components</a>
+    </div>
+  </nav>
   <main>
-    <a class="btn">Wave</a>
+    <section class="banner box-alt">
+      <div class="hero">
+        <span class="wrapper">
+          <h1>Pulse UI</h1>
+        </span>
+        <p>Pulse is a professional design system for web development. It supports pure HTML and CSS components.</p>
+      </div>
+      <div class="graphic">
+        <span :class="icon">draw</span>
+      </div>
+    </section>
+    <section>
+      <div class="content">
+        <span class="picture">
+
+        </span>
+        <span class="read">
+          <h2>Introduction</h2>
+          <p>This is an introduction to Pulse UI.</p>
+        </span>
+      </div>
+    </section>
   </main>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="../script.js"></script>
