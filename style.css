@@ -56,7 +56,7 @@ p {
   transition: 0.2s color ease-out;
 }
 
-#navigation .left a:hover {
+#navigation .left a:hover, #navigation .left a:focus {
   color: var(--accent);
 }
 
@@ -72,7 +72,7 @@ p {
   transition: 0.2s opacity ease-out;
 }
 
-#navigation .right a:hover {
+#navigation .right a:hover, #navigation .right a:focus {
   opacity: 0.75;
 }
 

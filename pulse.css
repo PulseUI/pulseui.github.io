@@ -108,7 +108,7 @@ a, button, input {
   color: var(--light);
   background-color: var(--accent);
   font-size: inherit;
-  border-radius: 5px;
+  border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
   -moz-user-select: none;
@@ -117,12 +117,25 @@ a, button, input {
   -webkit-tap-highlight-color: transparent;
   vertical-align: middle;
   z-index: 1;
-  transition: .3s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.btn:hover, .btn:focus {
+  filter: brightness(110%);
+}
+
+.btn:active {
+  filter: brightness(100%);
 }
 
 .btn.subtle {
   color: var(--accent);
   background-color: transparent;
+}
+
+.btn.subtle:hover, .btn.subtle:focus {
+  background-color: var(--trans);
+  filter: none;
 }
 
 .btn span:first-child {
@@ -157,7 +170,7 @@ input {
   box-sizing: border-box;
   color: var(--color-strong);
   background: var(--bg-color-weak);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .material-symbols-rounded + input {
