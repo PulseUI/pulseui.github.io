@@ -64,9 +64,10 @@
             <input type="text" required>
             <label>Name</label>
           </div>
-          <div class="text">
-            <span :class="icon">visibility</span>
-            <input type="password" required>
+          <div class="text" x-data="{ visible: false }">
+            <span :class="icon" x-text="(visible) ? 'visibility' : 'visibility_off'"
+              @click="visible = !visible">visibility</span>
+            <input :type="(visible) ? 'text' : 'password'" required>
             <label>Password</label>
           </div>
         </span>
