@@ -19,12 +19,18 @@ function ripple() {
 }
 
 function pulse(e) {
-  let color = '#2f3136'
+  let color = ''
   for (const item of e.classList) {
     if (item.startsWith('pulse-')) {
       color = `#${item.split('-')[1]}`
     }
+    if (!color) {
+      if (item === 'subtle') {
+        color = '#2c6fef'
+      }
+    }
   }
+  if (!color) color = '#2f3136'
   e.setAttribute('onpointerdown', `ripplet(arguments[0], { clearing: false, color: "${color}" })`)
   e.setAttribute('onpointerup', 'ripplet.clear(this)')
   e.setAttribute('onpointerleave', 'ripplet.clear(this)')

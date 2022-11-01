@@ -9,6 +9,10 @@ body {
   font-family: 'Lexend Deca';
 }
 
+p {
+  animation: 0.5s fade ease-out;
+}
+
 #navigation {
   position: fixed;
   top: 0;
@@ -81,6 +85,27 @@ body {
   color: var(--bg-color-weak);
 }
 
+#navigation .text .material-symbols-rounded {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 14px;
+  right: 16px;
+  color: var(--bg-color-weak);
+  background-color: transparent;
+  border-radius: 0;
+  z-index: 1;
+}
+
+#logo {
+  margin: 0 10px 0 0;
+  color: var(--nav-color);
+  background-color: transparent;
+  border-radius: 0;
+}
+
 main {
   position: relative;
   display: flex;
@@ -111,18 +136,20 @@ section {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
-.read, .picture {
+.read, .panel {
   width: 400px;
 }
 
-.picture {
+.panel {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 section.banner {
@@ -160,7 +187,6 @@ section.banner * {
 .hero p {
   width: 100%;
   color: var(--bg-color-weak);
-  animation: 0.5s fade ease-out;
 }
 
 .graphic {

@@ -101,9 +101,16 @@ a, button, input {
 
 .btn {
   position: relative;
-  cursor: pointer;
   display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--light);
+  background-color: var(--accent);
+  font-size: inherit;
+  border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -111,6 +118,19 @@ a, button, input {
   vertical-align: middle;
   z-index: 1;
   transition: .3s ease-out;
+}
+
+.btn.subtle {
+  color: var(--accent);
+  background-color: transparent;
+}
+
+.btn span:first-child {
+  margin: 0;
+}
+
+.btn span {
+  margin: 0 0 0 5px;
 }
 
 .btn .waves-ripple {
@@ -137,7 +157,11 @@ input {
   box-sizing: border-box;
   color: var(--color-strong);
   background: var(--bg-color-weak);
-  border-radius: 4px;
+  border-radius: 5px;
+}
+
+.material-symbols-rounded + input {
+  padding: 20px 48px 8px 16px;
 }
 
 .wrapper {
@@ -147,6 +171,7 @@ input {
 .text {
   position: relative;
   display: inline-block;
+/*   width: 200px; */
   height: 48px;
   border-radius: 4px;
   overflow: hidden;
@@ -183,6 +208,20 @@ input {
   color: var(--accent) !important;
 }
 
+.text .material-symbols-rounded {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 14px;
+  right: 16px;
+  color: var(--color);
+  background-color: transparent;
+  border-radius: 0;
+  z-index: 1;
+}
+
 label {
   position: absolute;
   top: 14px;
@@ -198,6 +237,49 @@ label {
   transition-timing-function: ease-out;
 }
 
+/* Smart Classes */
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.align-start {
+  display: flex;
+  align-items: center;
+}
+
+.align-end {
+  display: flex;
+  align-items: end;
+}
+
 .box {
   display: flex;
   flex-direction: row;
@@ -209,6 +291,8 @@ label {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
+/* Media */
 
 @media only screen and (max-width: 800px) {
   .box {

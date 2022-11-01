@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Pulse</title>
-  <link href="../pulse.css" rel="stylesheet" type="text/css" />
   <link href="../style.css" rel="stylesheet" type="text/css" />
+  <link href="../pulse.css" rel="stylesheet" type="text/css" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +19,11 @@
 <body x-data="{ icon: 'material-symbols-rounded' }">
   <nav id="navigation">
     <div class="left">
-      <a href="#" class="btn pulse-2c6fef">
+      <a href="#" class="btn pulse-2c6fef" id="logo">
         Pulse
       </a>
       <div class="text">
+        <span :class="icon">search</span>
         <input type="text" required>
         <label>Search</label>
       </div>
@@ -46,8 +47,28 @@
     </section>
     <section>
       <div class="content">
-        <span class="picture">
-
+        <span class="panel evenly">
+          <button class="btn">
+            <span>Trailing</span>
+            <span :class="icon">star</span>
+          </button>
+          <button class="btn">
+            <span :class="icon">flag</span>
+            <span>Leading</span>
+          </button>
+          <button class="btn subtle">
+            <span :class="icon">temp_preferences_custom</span>
+            <span>Subtle</span>
+          </button>
+          <div class="text">
+            <input type="text" required>
+            <label>Name</label>
+          </div>
+          <div class="text">
+            <span :class="icon">visibility</span>
+            <input type="password" required>
+            <label>Password</label>
+          </div>
         </span>
         <span class="read">
           <h2>Introduction</h2>
