@@ -6,7 +6,7 @@ function out(text, color, background) {
 out('INT FRACT', '#5865f2')
 
 function ripple() {
-  const buttons = document.querySelectorAll('button.btn')
+  const buttons = document.querySelectorAll('button.btn:not(.btn:disabled)')
   const anchors = document.querySelectorAll('a.btn')
 
   for (const button of buttons) {
@@ -34,6 +34,16 @@ function pulse(e) {
   e.setAttribute('onpointerdown', `ripplet(arguments[0], { clearing: false, color: "${color}" })`)
   e.setAttribute('onpointerup', 'ripplet.clear(this)')
   e.setAttribute('onpointerleave', 'ripplet.clear(this)')
+}
+
+function emit(e) {
+  console.log(e)
+  e.checked = true
+  const radios = e.closest('.radios').childNodes
+  for (const radio of radios) {
+    console.log(radio)
+    radio.checked = false
+  }
 }
 
 ripple()

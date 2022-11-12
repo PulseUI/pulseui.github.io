@@ -60,6 +60,9 @@
             <span :class="icon">temp_preferences_custom</span>
             <span>Subtle</span>
           </button>
+          <button class="btn" disabled="disabled">
+            <span>Disabled</span>
+          </button>
           <div class="text">
             <input type="text" required>
             <label>Name</label>
@@ -74,6 +77,49 @@
         <span class="read">
           <h2>Introduction</h2>
           <p>This is an introduction to Pulse UI.</p>
+        </span>
+      </div>
+    </section>
+    <section>
+      <div class="content">
+        <span class="panel evenly">
+          <form class="form">
+            <span class="form-title">Feedback</span>
+            <div class="form-group row">
+              <div class="text">
+                <input type="text" required>
+                <label>First Name</label>
+              </div>
+              <div class="text">
+                <input type="text" required>
+                <label>Last Name</label>
+              </div>
+            </div>
+            <div class="form-group column">
+              <div class="radios">
+                <span class="radio">
+                  <input type="radio" onclick="emit(this)" value="0">
+                  <div class="radio-circles">
+                    <span class="radio-outer"></span>
+                    <span class="radio-inner"></span>
+                  </div>
+                  <label>First Option</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" onclick="emit(this)" value="1">
+                  <div class="radio-circles">
+                    <span class="radio-outer"></span>
+                    <span class="radio-inner"></span>
+                  </div>
+                  <label>Second Option</label>
+                </span>
+              </div>
+            </div>
+          </form>
+        </span>
+        <span class="read">
+          <h2>Input Styles</h2>
+          <p>Pulse attempts to restyle the classic input elements because they look ugly on modern websites!</p>
         </span>
       </div>
     </section>
