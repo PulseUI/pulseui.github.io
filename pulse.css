@@ -340,16 +340,20 @@ input[type=radio]:checked + .radio-circles .radio-inner {
 
 input[type=radio] + .radio-circles .touch {
   position: absolute;
+  background-color: var(--shade);
   width: 0;
   height: 0;
   border-radius: 50%;
   transition: 0.1s linear;
 }
 
+input[type=radio]:checked + .radio-circles .touch {
+  background-color: var(--trans);
+}
+
 input[type=radio]:hover + .radio-circles .touch, input[type=radio]:focus + .radio-circles .touch {
   width: 48px;
   height: 48px;
-  background-color: var(--trans);
 }
 
 form {
