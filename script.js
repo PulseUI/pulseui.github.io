@@ -38,12 +38,14 @@ function pulse(e) {
 
 function emit(e) {
   console.log(e)
-  e.checked = true
   const radios = e.closest('.radios').childNodes
   for (const radio of radios) {
-    console.log(radio)
-    radio.checked = false
+    if (radio.classList) {
+      const btn = radio.childNodes[1]
+      btn.checked = false
+    }
   }
+  e.checked = true
 }
 
 ripple()

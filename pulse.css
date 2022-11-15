@@ -263,6 +263,14 @@ input[type=text] + label, input[type=password] + label {
   width: 100%;
 }
 
+.radios .radio {
+  margin: 8px 0 0 0;
+}
+
+.radios .radio:first-child {
+  margin: 0;
+}
+
 .radio {
   position: relative;
   display: flex;
@@ -271,34 +279,77 @@ input[type=text] + label, input[type=password] + label {
   align-items: center;
 }
 
+.radio label {
+  margin: 0 0 0 8px;
+}
+
 input[type=radio] {
   position: relative;
   display: flex;
   margin: 0;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   opacity: 0;
   cursor: pointer;
 }
 
-input[type=radio] .radio-circles {
+input[type=radio] + .radio-circles {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
 }
 
 input[type=radio] + .radio-circles .radio-outer {
   position: relative;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+  border-color: var(--color);
+  border-style: solid;
+  border-radius: 50%;
+  transition: 0.2s linear;
 }
 
 input[type=radio] + .radio-circles .radio-inner {
-  position: relative;
+  position: absolute;
+  background-color: var(--accent);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: 0.1s linear;
 }
 
 input[type=radio]:checked + .radio-circles .radio-outer {
   position: relative;
+  border-color: var(--accent);
 }
 
 input[type=radio]:checked + .radio-circles .radio-inner {
-  position: relative;
+  position: absolute;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+}
+
+input[type=radio] + .radio-circles .touch {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transition: 0.1s linear;
+}
+
+input[type=radio]:hover + .radio-circles .touch, input[type=radio]:focus + .radio-circles .touch {
+  width: 48px;
+  height: 48px;
+  background-color: var(--trans);
 }
 
 form {
