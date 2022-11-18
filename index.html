@@ -67,11 +67,17 @@
             <input type="text" required>
             <label>Name</label>
           </div>
-          <div class="text" x-data="{ visible: false }">
-            <span :class="icon" x-text="(visible) ? 'visibility' : 'visibility_off'"
-              @click="visible = !visible">visibility</span>
-            <input :type="(visible) ? 'text' : 'password'" required>
-            <label>Password</label>
+          <div class="text-wrapper" x-data="{ visible: false, password: '' }">
+            <div class="text">
+              <span :class="icon" x-text="(visible) ? 'visibility' : 'visibility_off'"
+                @click="visible = !visible">visibility</span>
+              <input :type="(visible) ? 'text' : 'password'" x-model="password" required>
+              <label>Password</label>
+            </div>
+            <div class="info">
+              <span class="error" :class="{ 'red': password.length < 8 }" x-text="(password.length < 8) ? 'Password is too short!' : 'Good password!'"></span>
+              <span class="counter" x-text="password.length"></span>
+            </div>
           </div>
         </span>
         <span class="read">
@@ -88,11 +94,7 @@
             <div class="form-group row">
               <div class="text">
                 <input type="text" required>
-                <label>First Name</label>
-              </div>
-              <div class="text">
-                <input type="text" required>
-                <label>Last Name</label>
+                <label>Full Name</label>
               </div>
             </div>
             <div class="form-group column">
@@ -114,6 +116,30 @@
                     <div class="touch"></div>
                   </div>
                   <label>Second Option</label>
+                </span>
+              </div>
+            </div>
+            <div class="form-group column">
+              <div class="checkboxes">
+                <span class="checkbox">
+                  <input type="checkbox" onclick="toggle(this)">
+                  <div class="check">
+                    <svg class="checkmark" viewBox="-4 -4 32 32">
+                      <path class="tick" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="touch"></div>
+                  </div>
+                  <label>Cheese</label>
+                </span>
+                <span class="checkbox">
+                  <input type="checkbox" onclick="toggle(this)">
+                  <div class="check">
+                    <svg class="checkmark" viewBox="-4 -4 32 32">
+                      <path class="tick" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                    </svg>
+                    <div class="touch"></div>
+                  </div>
+                  <label>Mayo</label>
                 </span>
               </div>
             </div>

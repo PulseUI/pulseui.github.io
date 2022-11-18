@@ -48,4 +48,8 @@ function emit(e) {
   e.checked = true
 }
 
+function toggle(e) {
+  console.log(e)
+}
+
 ripple()

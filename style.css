@@ -77,9 +77,13 @@ p {
   opacity: 0.75;
 }
 
-#navigation input {
+#navigation input[type=text] {
   color: var(--bg-color);
-  background: var(--color);
+  background: var(--color-hard);
+}
+
+#navigation input[type=text]:focus {
+  background-color: var(--color);
 }
 
 #navigation label {
