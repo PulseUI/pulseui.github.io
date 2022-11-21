@@ -175,6 +175,11 @@ a, button, input {
   pointer-events: none;
 }
 
+input[type=submit] {
+  justify-content: center;
+  width: 100%;
+}
+
 input[type=text], input[type=password] {
   position: relative;
   padding: 20px 16px 8px;
@@ -509,6 +514,8 @@ form {
   box-sizing: border-box;
   padding: 20px;
   width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 64px 0px var(--bluex);
 }
 
 form .form-group {

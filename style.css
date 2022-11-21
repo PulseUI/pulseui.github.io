@@ -134,6 +134,11 @@ section {
   height: 600px;
 }
 
+section.docs {
+  flex-direction: row;
+  height: auto;
+}
+
 .content {
   position: relative;
   display: flex;

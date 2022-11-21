@@ -3,18 +3,16 @@ function out(text, color, background) {
   console.log(`%c${text}`, `color: ${color}; background: ${background}; font-size: 32px;`);
 }
 
-out('INT FRACT', '#5865f2')
+async function nav() {
+  const html = await fetch('/widgets/nav.html').then(data => data.text())
+  document.getElementById('navigation').innerHTML = html
+}
 
 function ripple() {
-  const buttons = document.querySelectorAll('button.btn:not(.btn:disabled)')
-  const anchors = document.querySelectorAll('a.btn')
+  const buttons = document.querySelectorAll('.btn:not(.btn:disabled)')
 
   for (const button of buttons) {
     pulse(button)
-  }
-
-  for (const a of anchors) {
-    pulse(a)
   }
 }
 
@@ -37,7 +35,7 @@ function pulse(e) {
 }
 
 function emit(e) {
-  console.log(e)
+  console.log(e.value)
   const radios = e.closest('.radios').childNodes
   for (const radio of radios) {
     if (radio.classList) {
@@ -49,7 +47,18 @@ function emit(e) {
 }
 
 function toggle(e) {
-  console.log(e)
+  console.log(e.value)
 }
 
+function fields() {
+  const forms = document.querySelectorAll('form')
+  for (const form of forms) {
+    form.setAttribute('novalidate', '')
+    form.addEventListener('submit', e => e.preventDefault())
+  }
+}
+
+out('INT FRACT', '#5865f2')
+nav()
 ripple()
+fields()

@@ -17,22 +17,7 @@
 </head>
 
 <body x-data="{ icon: 'material-symbols-rounded' }">
-  <nav id="navigation">
-    <div class="left">
-      <a href="#" class="btn pulse-2c6fef" id="logo">
-        Pulse
-      </a>
-      <div class="text">
-        <span :class="icon">search</span>
-        <input type="text" required>
-        <label>Search</label>
-      </div>
-    </div>
-    <div class="right">
-      <a href="../guidelines">Design</a>
-      <a href="../components">Components</a>
-    </div>
-  </nav>
+  <nav id="navigation"></nav>
   <main>
     <section class="banner box-alt">
       <div class="hero">
@@ -90,7 +75,7 @@
       <div class="content box-alt">
         <span class="panel evenly">
           <form class="form">
-            <span class="form-title">Feedback</span>
+            <span class="form-title">Order</span>
             <div class="form-group row">
               <div class="text">
                 <input type="text" required>
@@ -122,7 +107,7 @@
             <div class="form-group column">
               <div class="checkboxes">
                 <span class="checkbox">
-                  <input type="checkbox" onclick="toggle(this)">
+                  <input type="checkbox" onclick="toggle(this)" value="0">
                   <div class="check">
                     <svg class="checkmark" viewBox="-4 -4 32 32">
                       <path class="tick" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
@@ -132,7 +117,7 @@
                   <label>Cheese</label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" onclick="toggle(this)">
+                  <input type="checkbox" onclick="toggle(this)" value="1">
                   <div class="check">
                     <svg class="checkmark" viewBox="-4 -4 32 32">
                       <path class="tick" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
@@ -143,6 +128,7 @@
                 </span>
               </div>
             </div>
+            <input type="submit" value="Submit" class="btn">
           </form>
         </span>
         <span class="read">
