@@ -10,7 +10,11 @@ Pulse UI boasts about its brilliant buttons that produce a ripple effect when cl
 - Classic Buttons 
 - Subtle Buttons 
 
+All buttons allow **trailing** and **leading** icons. Icons can be added to buttons by placing the text and icon name inside a `span` element. 
+
 #### Classic Buttons 
+
+
 
 #### Subtle Buttons 
 

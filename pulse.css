@@ -176,7 +176,9 @@ a, button, input {
 }
 
 input[type=submit] {
+  display: flex;
   justify-content: center;
+  margin: 20px 0 0 0;
   width: 100%;
 }
 
@@ -444,6 +446,7 @@ input[type=checkbox] {
   position: absolute;
   top: 12px;
   left: 12px;
+  background-color: var(--accent);
   width: 24px;
   height: 24px;
   border-width: 2px;
@@ -456,8 +459,22 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked + .check {
-  background-color: var(--accent);
   border-color: var(--accent);
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: var(--bg-color);
+  width: 20px;
+  height: 20px;
+  transition: all 0.1s ease-out;
+}
+
+input[type=checkbox]:checked + .check:after {
+  transform: scale(0);
 }
 
 .checkmark {
