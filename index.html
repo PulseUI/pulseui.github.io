@@ -60,7 +60,8 @@
               <label>Password</label>
             </div>
             <div class="info">
-              <span class="error" :class="{ 'red': password.length < 8 }" x-text="(password.length < 8) ? 'Password is too short!' : 'Good password!'"></span>
+              <span class="error" :class="{ 'red': password.length < 8 }"
+                x-text="(password.length < 8) ? 'Password is too short!' : 'Good password!'"></span>
               <span class="counter" x-text="password.length"></span>
             </div>
           </div>
@@ -91,7 +92,7 @@
                     <span class="radio-inner"></span>
                     <div class="touch"></div>
                   </div>
-                  <label>First Option</label>
+                  <label>Thin Base</label>
                 </span>
                 <span class="radio">
                   <input type="radio" onclick="emit(this)" value="1">
@@ -100,7 +101,7 @@
                     <span class="radio-inner"></span>
                     <div class="touch"></div>
                   </div>
-                  <label>Second Option</label>
+                  <label>Thick Base</label>
                 </span>
               </div>
             </div>
@@ -110,7 +111,7 @@
                   <input type="checkbox" onclick="toggle(this)" value="0">
                   <div class="check">
                     <svg class="checkmark" viewBox="-4 -4 32 32">
-                      <path class="tick" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                      <path class="tick" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
                     </svg>
                     <div class="touch"></div>
                   </div>
@@ -120,7 +121,7 @@
                   <input type="checkbox" onclick="toggle(this)" value="1">
                   <div class="check">
                     <svg class="checkmark" viewBox="-4 -4 32 32">
-                      <path class="tick" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                      <path class="tick" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
                     </svg>
                     <div class="touch"></div>
                   </div>

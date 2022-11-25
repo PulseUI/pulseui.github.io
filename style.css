@@ -135,7 +135,11 @@ section {
 }
 
 section.docs {
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
   width: 100%;
   height: auto;
 }
@@ -143,6 +147,7 @@ section.docs {
 .document {
   position: relative;
   display: block;
+  margin: 16px 0 0 0;
   width: 800px;
 }
 

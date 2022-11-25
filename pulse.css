@@ -514,6 +514,7 @@ input[type=checkbox] + .check .touch {
   height: 0;
   border-radius: 50%;
   transition: 0.1s linear;
+  z-index: 1;
 }
 
 input[type=checkbox]:checked + .check .touch {
@@ -532,7 +533,7 @@ form {
   padding: 20px;
   width: 100%;
   border-radius: 4px;
-  box-shadow: 0 0 64px 0px var(--bluex);
+  box-shadow: 0 0 64px 2px var(--bluex);
 }
 
 form .form-group {
@@ -545,6 +546,48 @@ form .form-group:first-child {
 
 .form-title {
   font-size: 24px;
+}
+
+nav.sidebar, nav.headings {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  width: 200px;
+  height: auto;
+}
+
+nav.sidebar ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+nav.sidebar ul li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 0;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+nav.sidebar ul li a {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
+  padding: 0 16px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 /* Smart Classes */
